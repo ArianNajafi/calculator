@@ -79,12 +79,17 @@ class calculator{
         else if(btn_id == "btn_Del"){
             sentenceResult = sentenceResult.split("")
             console.log(sentenceResult);
-            sentenceResult = sentenceResult.slice(0,sentenceResult.length-1);
+            if(sentenceResult[sentenceResult.length-2] == " "){
+                sentenceResult = sentenceResult.slice(0,sentenceResult.length-2);    
+            }
+            else if(sentenceResult[sentenceResult.length-2 ] != " "){
+                sentenceResult = sentenceResult.slice(0,sentenceResult.length-1);
+            }
             sentenceResult = sentenceResult.join("");
             pushEqualOrNot = false;
         }
 
-        else if(btn_id == "btn_C"){
+        else if((btn_id == "btn_C") || (btn_id == "btn_CE")){
             sentenceResult = "";
             calculator_UI.showResult("0");
             pushEqualOrNot = false;
