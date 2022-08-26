@@ -7,17 +7,18 @@
 :root{
     --btnContent_black : rgb(0, 0, 0);
     --showResultProcess_black : #4c4c4c;
-    --calcBackground_white: #c0c1c1;
+    --calcBackground_white: #e9e9e9;
     --btnsBackground_white: #f3f2f2;
 }
 
 .mainBody{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
-    background:linear-gradient(-10deg,rgb(160, 103, 103),rgb(125, 125, 165));
+    background:linear-gradient(-10deg,rgb(230, 230, 230),rgb(247, 247, 247));
     position: fixed;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     /*unable to copy text*/
@@ -35,7 +36,9 @@
     height: 438px;
     background-color: var(--calcBackground_white);
     border-radius: 4px;
-    box-shadow: 4px 5px 10px rgb(80, 80, 80);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    margin-top: 60px;
+    padding: 2px;
 }
 
 
